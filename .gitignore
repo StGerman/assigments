@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 django_photos/__pycache__
 db.sqlite3
+.vscode
+.DS_Store
