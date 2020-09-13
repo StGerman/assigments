@@ -23,7 +23,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, "media")
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "tyiczxnci56v^8nu$4et-tn+572-+k&#k*3j(=b2e95o!1y2#^"
+SECRET_KEY = os.environ.get("SECRET_KEY", "lolkek")
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
