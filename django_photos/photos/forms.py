@@ -1,6 +1,16 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Photo
+
+
+class PhotoForm(forms.ModelForm):
+    name = forms.TextInput()
+    image = forms.ImageField()
+
+    class Meta:
+        model = Photo
+        fields = ["name", "image"]
 
 
 class RegisterForm(UserCreationForm):

@@ -1,0 +1,11 @@
+{% extends "main/base.html" %}
+{% block title %} {{photo.name}} {% endblock %}
+
+{% block content %}
+<h1>{{photo.name}}</h1>
+<ul>
+  {% for item in photo.item_set.all %}
+  <li>{{item.text}}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
